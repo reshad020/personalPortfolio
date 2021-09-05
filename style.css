@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+body{
+    font-family: 'Jost', sans-serif;
+}
+span{
+    position:relative;
+    color:white;
+    -webkit-text-stroke:0.1vw rgb(3, 94, 33);
+    text-transform:uppercase;
+}
+header{
+    background: url("images/cover.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height:100vh;
+}
+span::before{
+    content:"Aehtesham ";
+    width:0;
+    color:teal;
+    position:absolute;
+    top:0;
+    left:0;
+    border-right: 2px solid teal;
+    animation:slide 6s  linear infinite ;
+    animation-delay: 2s;
+    overflow:hidden;
+
+}
+
+@keyframes slide{
+    0%{
+        width:0%;
+    }
+    50%{
+        width:50%;
+    }
+    100%{
+        width:100%;
+    }
+}
+
+@keyframes self-intro{
+    0%{
+        transform:translateX(-40px);
+    }
+    100%{
+        transform:translateX(0);
+    }
+}
+.self-intro-animated{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+}
+#full-animated-section{
+    display:none;
+}
+@keyframes opacity{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:100;
+    }
+}
+
+.skill-div-1{
+    
+    border:3px solid;
+    animation:border 3s;
+    
+}
+.skill-div-2{
+    
+    border:3px solid;
+    animation:border 3s 3s;
+    
+}
+.skill-div-3{
+    
+    border:3px solid;
+    animation:border 3s 6s;
+    
+}
+.skill-div-4{
+    
+    border:3px solid;
+    animation:border 3s 9s;
+    
+}
+
+@keyframes border{
+    
+    0%{
+        opacity:0;
+        background-color:white;
+        color:black;
+        transform:translateX(+60px);
+    }
+    
+    100%{
+        opacity:1;
+        background-color:royalblue;
+        color:white;
+        transform:translateX(0);
+    }
+    
+}
